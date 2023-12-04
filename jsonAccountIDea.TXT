@@ -1,0 +1,9 @@
+{
+  "username": "",
+  "levl": "papapapap",
+  "xp": "",
+   "ip":"",
+   rp: ,
+   friendlist:{"",},
+
+}

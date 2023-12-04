@@ -1,0 +1,41 @@
+﻿<Window x:Class="Old_Client_dupe.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Login Form" Width="1280" Height="720"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Image Source="pack://application:,,,/images/kudos-productions-midnight-ahri.jpg" Stretch="Fill" Height="NaN" Margin="0,-103,-233,-103" Width="NaN" Grid.ColumnSpan="2" />
+
+        <!-- Position the login form on the left side -->
+        <Border Background="#AA000000" HorizontalAlignment="Left" Margin="69,0,0,0" VerticalAlignment="Center" Padding="20" CornerRadius="5" Width="295" Height="324">
+            <Border.Effect>
+                <DropShadowEffect Color="Black" Direction="320" ShadowDepth="5" Opacity="2.5" BlurRadius="15"/>
+            </Border.Effect>
+            <StackPanel>
+                <TextBlock Text="Account Login" Foreground="White" FontSize="16" FontWeight="Bold" HorizontalAlignment="Stretch" Margin="10"/>
+                <TextBox x:Name="UsernameTextBox" Width="260" Margin="5" Background="#FFF4F5F4" Foreground="Black" BorderBrush="Transparent" Padding="5"/>
+                <PasswordBox x:Name="PasswordBox" Width="260" Margin="5" Background="#FFF4F5F4" Foreground="black" BorderBrush="Transparent" Padding="5"/>
+
+                <!-- Grid for aligning checkbox and button -->
+                <Grid Margin="5" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+
+                    <CheckBox x:Name="RememberUsernameCheckBox" Content="Remember Username" Foreground="White" Margin="5,0,0,0" Grid.Column="0"/>
+                    <Border CornerRadius="2.5" Background="#555555" Margin="0,0,0,0" Grid.Column="1">
+                        <Button x:Name="loginButton" Content="Log in" Click="loginButton_Click" Width="69" Background="Transparent" Foreground="White" BorderBrush="Transparent">
+                            <!-- Other properties and content of the button -->
+                        </Button>
+                    </Border>
+                </Grid>
+
+                <TextBlock Text="Don't have an account? Sign up now!" Foreground="White" HorizontalAlignment="Center" TextDecorations="Underline" Cursor="Hand" Margin="20,50,20,20"/>
+                <TextBlock Text="Forgot your username?" Foreground="White" HorizontalAlignment="Center" TextDecorations="Underline" Cursor="Hand"/>
+                <TextBlock Text="Forgot your password?" Foreground="White" HorizontalAlignment="Center" TextDecorations="Underline" Cursor="Hand" Margin="10"/>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>
